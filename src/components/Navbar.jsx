@@ -75,7 +75,7 @@ export default function Navbar() {
         <motion.a
           href="mailto:nkbisane@gmail.com"
           className="nav-cta"
-          whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(139,92,246,0.5)' }}
+          whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(37,99,235,0.4)' }}
           whileTap={{ scale: 0.95 }}
         >
           Hire Me

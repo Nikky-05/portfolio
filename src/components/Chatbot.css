@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 20px;
-  background: rgba(139, 92, 246, 0.06);
+  background: rgba(37, 99, 235, 0.06);
   border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -97,14 +97,14 @@
 }
 
 .msg-bubble.bot {
-  background: rgba(139, 92, 246, 0.08);
-  border: 1px solid rgba(139, 92, 246, 0.12);
+  background: rgba(37, 99, 235, 0.07);
+  border: 1px solid rgba(37, 99, 235, 0.14);
   color: var(--text-primary);
   border-bottom-left-radius: 4px;
 }
 
 .msg-bubble.user {
-  background: linear-gradient(135deg, var(--accent-purple), #6d28d9);
+  background: linear-gradient(135deg, var(--accent-purple), var(--navy));
   color: white;
   border-bottom-right-radius: 4px;
 }
@@ -143,8 +143,8 @@
 
 .suggestion-chip {
   padding: 5px 14px;
-  background: rgba(34, 211, 238, 0.06);
-  border: 1px solid rgba(34, 211, 238, 0.15);
+  background: rgba(37, 99, 235, 0.06);
+  border: 1px solid rgba(37, 99, 235, 0.18);
   border-radius: 20px;
   color: var(--accent-cyan);
   font-family: var(--font-code);
@@ -155,8 +155,8 @@
 }
 
 .suggestion-chip:hover {
-  background: rgba(34, 211, 238, 0.12);
-  box-shadow: 0 0 10px rgba(34, 211, 238, 0.15);
+  background: rgba(37, 99, 235, 0.12);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.18);
 }
 
 /* Input row */
@@ -166,12 +166,12 @@
   gap: 10px;
   padding: 14px 20px;
   border-top: 1px solid var(--border-subtle);
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(10, 37, 64, 0.03);
 }
 
 .chat-input {
   flex: 1;
-  background: rgba(255, 255, 255, 0.04);
+  background: #f3f6fc;
   border: 1px solid var(--border-subtle);
   border-radius: 12px;
   padding: 10px 16px;
@@ -188,7 +188,8 @@
 
 .chat-input:focus {
   border-color: var(--accent-purple);
-  box-shadow: 0 0 10px rgba(139, 92, 246, 0.15);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  background: #ffffff;
 }
 
 .chat-send-btn {
@@ -197,7 +198,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--accent-purple), #6d28d9);
+  background: linear-gradient(135deg, var(--accent-purple), var(--navy));
   border: none;
   border-radius: 12px;
   color: white;

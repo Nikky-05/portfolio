@@ -17,7 +17,7 @@ export default function ParticleField() {
     resize();
     window.addEventListener('resize', resize);
 
-    const colors = ['#8b5cf6', '#22d3ee', '#f472b6', '#34d399', '#fbbf24'];
+    const colors = ['#1d4ed8', '#2563eb', '#3b82f6', '#0ea5e9', '#0a2540'];
 
     class Particle {
       constructor() {
@@ -73,7 +73,7 @@ export default function ParticleField() {
           if (dist < 120) {
             ctx.beginPath();
             ctx.strokeStyle = particles[i].color;
-            ctx.globalAlpha = (1 - dist / 120) * 0.15;
+            ctx.globalAlpha = (1 - dist / 120) * 0.22;
             ctx.lineWidth = 0.5;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);

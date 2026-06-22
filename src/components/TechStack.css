@@ -39,8 +39,8 @@
   align-items: center;
   gap: 6px;
   padding: 6px 14px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(10, 37, 64, 0.04);
+  border: 1px solid rgba(10, 37, 64, 0.08);
   border-radius: 20px;
   font-size: 0.8rem;
   color: var(--text-secondary);
@@ -52,8 +52,8 @@
 .tech-tag:hover {
   border-color: var(--tag-color);
   color: var(--tag-color);
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 15px color-mix(in srgb, var(--tag-color) 20%, transparent);
+  background: color-mix(in srgb, var(--tag-color) 8%, transparent);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--tag-color) 18%, transparent);
 }
 
 .tag-icon {
@@ -85,9 +85,9 @@
   color: var(--text-muted);
   white-space: nowrap;
   padding: 8px 16px;
-  border: 1px solid rgba(139, 92, 246, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.12);
   border-radius: 8px;
-  background: rgba(139, 92, 246, 0.03);
+  background: rgba(37, 99, 235, 0.04);
 }
 
 .marquee-icon {

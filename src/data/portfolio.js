@@ -68,7 +68,7 @@ export const services = [
   {
     icon: "🤖",
     title: "AI & Automation Solutions",
-    color: "#8b5cf6",
+    color: "#1d4ed8",
     items: [
       "AI Chatbots",
       "Custom AI Agents",
@@ -82,7 +82,7 @@ export const services = [
   {
     icon: "💻",
     title: "Full Stack Development",
-    color: "#3b82f6",
+    color: "#2563eb",
     items: [
       "Custom Web Applications",
       "SaaS Platform Development",
@@ -96,7 +96,7 @@ export const services = [
   {
     icon: "🌐",
     title: "Website Development",
-    color: "#22d3ee",
+    color: "#0ea5e9",
     items: [
       "Business & Corporate Websites",
       "Portfolio Websites",
@@ -109,7 +109,7 @@ export const services = [
   {
     icon: "🎓",
     title: "AI & Technical Training",
-    color: "#f472b6",
+    color: "#1e3a8a",
     items: [
       "Python Training",
       "AI & Machine Learning Training",
@@ -122,7 +122,7 @@ export const services = [
   {
     icon: "🏫",
     title: "Academic & College Projects",
-    color: "#34d399",
+    color: "#0284c7",
     items: [
       "Final Year Projects",
       "AI/ML Projects",
@@ -134,7 +134,7 @@ export const services = [
   {
     icon: "📊",
     title: "Business & Financial Solutions",
-    color: "#fbbf24",
+    color: "#3b82f6",
     items: [
       "Business Automation Consulting",
       "Digital Transformation",
