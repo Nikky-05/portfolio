@@ -4,8 +4,11 @@ import ParticleField from './components/ParticleField';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Services from './components/Services';
 import TechStack from './components/TechStack';
 import Projects from './components/Projects';
+import Building from './components/Building';
+import WhyChooseUs from './components/WhyChooseUs';
 import Chatbot from './components/Chatbot';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -160,8 +163,11 @@ export default function App() {
       <Navbar />
       <Hero />
       <About />
+      <Services />
       <TechStack />
       <Projects />
+      <Building />
+      <WhyChooseUs />
       <Chatbot />
       <Contact />
       <Footer />

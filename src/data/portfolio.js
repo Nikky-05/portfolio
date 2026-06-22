@@ -31,25 +31,28 @@ export const techStack = {
   backend: [
     "Python",
     "FastAPI",
+    "Flask",
+    "Node.js",
     "REST APIs",
     "Uvicorn",
     "Pydantic",
-    "Gunicorn",
+    "Redis",
   ],
-  frontend: ["HTML5", "CSS3", "JavaScript", "Jinja2", "React"],
-  databases: ["SQLite", "PostgreSQL", "Vector DB", "NoSQL"],
+  frontend: ["React.js", "Next.js", "HTML5", "CSS3", "JavaScript", "Jinja2"],
+  databases: ["PostgreSQL", "SQLite", "Vector DB", "NoSQL"],
   aiMl: [
+    "LLMs",
     "LangChain",
-    "RAG Systems",
-    "LLM APIs",
+    "LangGraph",
+    "RAG Pipelines",
+    "Hugging Face",
     "Tesseract OCR",
     "OpenCV",
-    "Hugging Face",
     "Ollama",
     "NLP",
-    "Pretrained Transformers",
   ],
-  tools: ["Git", "GitHub", "Postman", "VS Code", "Render", "Docker"],
+  cloud: ["AWS", "Google Cloud (GCP)", "Docker", "Nginx", "GitHub Actions", "Render"],
+  tools: ["Git", "GitHub", "Postman", "VS Code"],
   softSkills: [
     "Analytical Thinking",
     "Problem Solving",
@@ -59,6 +62,132 @@ export const techStack = {
     "Continuous Improvement",
   ],
 };
+
+// Services offered
+export const services = [
+  {
+    icon: "🤖",
+    title: "AI & Automation Solutions",
+    color: "#8b5cf6",
+    items: [
+      "AI Chatbots",
+      "Custom AI Agents",
+      "RAG Applications",
+      "OCR & Document Processing",
+      "Workflow Automation",
+      "AI-Powered Business Solutions",
+      "Business Process Automation",
+    ],
+  },
+  {
+    icon: "💻",
+    title: "Full Stack Development",
+    color: "#3b82f6",
+    items: [
+      "Custom Web Applications",
+      "SaaS Platform Development",
+      "Admin Dashboards",
+      "REST API Development",
+      "Backend Systems",
+      "Database Design & Integration",
+      "Cloud Deployment (AWS, GCP)",
+    ],
+  },
+  {
+    icon: "🌐",
+    title: "Website Development",
+    color: "#22d3ee",
+    items: [
+      "Business & Corporate Websites",
+      "Portfolio Websites",
+      "School & College Websites",
+      "E-Commerce Websites",
+      "Landing Pages",
+      "SEO-Friendly Websites",
+    ],
+  },
+  {
+    icon: "🎓",
+    title: "AI & Technical Training",
+    color: "#f472b6",
+    items: [
+      "Python Training",
+      "AI & Machine Learning Training",
+      "Git & GitHub Training",
+      "Full Stack Development Training",
+      "Real-Time Industry Projects",
+      "Career Guidance & Interview Prep",
+    ],
+  },
+  {
+    icon: "🏫",
+    title: "Academic & College Projects",
+    color: "#34d399",
+    items: [
+      "Final Year Projects",
+      "AI/ML Projects",
+      "Web Development Projects",
+      "Research Prototypes",
+      "Project Documentation Support",
+    ],
+  },
+  {
+    icon: "📊",
+    title: "Business & Financial Solutions",
+    color: "#fbbf24",
+    items: [
+      "Business Automation Consulting",
+      "Digital Transformation",
+      "Data Analytics Solutions",
+      "Financial Dashboard Development",
+      "Reporting & Insights Systems",
+    ],
+  },
+];
+
+// What we are currently building
+export const building = [
+  {
+    icon: "✈️",
+    title: "Aviation Boarding Automation System",
+    description:
+      "AI-powered passenger verification and boarding automation system to streamline airport operations.",
+    status: "In Development",
+  },
+  {
+    icon: "🐕",
+    title: "AI Robotic Dog",
+    description:
+      "Hardware + software integrated robotic dog capable of autonomous movement, smart navigation, and AI interaction.",
+    status: "Prototyping",
+  },
+  {
+    icon: "🛣️",
+    title: "Roadwork Intelligence Platform",
+    description:
+      "AI-powered platform for road project monitoring, DPR analysis, anomaly detection, and project intelligence.",
+    status: "In Development",
+  },
+  {
+    icon: "🪪",
+    title: "Intelligent KYC OCR Platform",
+    description:
+      "Automated document processing for Aadhaar, PAN, Passport, Driving License, and other KYC documents.",
+    status: "In Development",
+  },
+];
+
+// Why choose us
+export const whyChooseUs = [
+  { icon: "⚡", text: "AI-First Approach" },
+  { icon: "🔄", text: "End-to-End Development" },
+  { icon: "🏭", text: "Real-Time Industry Experience" },
+  { icon: "🚀", text: "Fast Delivery" },
+  { icon: "📈", text: "Scalable Solutions" },
+  { icon: "💰", text: "Affordable Pricing" },
+  { icon: "🛟", text: "Ongoing Support" },
+  { icon: "🧩", text: "Modern Technology Stack" },
+];
 
 export const projects = [
   {
@@ -209,6 +338,10 @@ export const chatbotResponses = {
     "Nikky works with SQLite, PostgreSQL, Vector DBs, and NoSQL for various data storage needs.",
   projects:
     "Nikky has built 8+ projects including AutoMail System, OCR Document Extraction, AgriStack Chatbot, Multi-RAG System, and more!",
+  services:
+    "Nikky offers AI & Automation, Full Stack Development, Website Development, AI/Technical Training, Academic Projects, and Business Solutions. Scroll to the Services section to explore!",
+  training:
+    "Nikky provides hands-on training in Python, AI/ML, Git & GitHub, and Full Stack Development — with real-time industry projects and career guidance.",
   experience:
     "Nikky is an AI Backend Developer with experience in Python, FastAPI, REST APIs, and intelligent automation systems.",
   education:

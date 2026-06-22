@@ -2,9 +2,10 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import {
   SiPython, SiFastapi, SiSqlite, SiPostgresql, SiGit, SiGithub,
-  SiDocker, SiOpencv, SiReact
+  SiDocker, SiOpencv, SiReact, SiNextdotjs, SiFlask, SiNodedotjs,
+  SiRedis, SiNginx, SiGithubactions
 } from 'react-icons/si';
-import { FaServer, FaCogs, FaBrain, FaTools, FaUsers, FaCode, FaDatabase, FaRobot } from 'react-icons/fa';
+import { FaServer, FaCogs, FaBrain, FaTools, FaUsers, FaCode, FaDatabase, FaRobot, FaCloud } from 'react-icons/fa';
 import { techStack } from '../data/portfolio';
 import './TechStack.css';
 
@@ -13,6 +14,7 @@ const categoryConfig = {
   frontend: { label: 'Frontend', icon: <FaCode />, color: '#3b82f6' },
   databases: { label: 'Databases', icon: <FaDatabase />, color: '#22d3ee' },
   aiMl: { label: 'AI / ML', icon: <FaBrain />, color: '#f472b6' },
+  cloud: { label: 'Cloud & DevOps', icon: <FaCloud />, color: '#60a5fa' },
   tools: { label: 'Tools', icon: <FaTools />, color: '#fbbf24' },
   softSkills: { label: 'Soft Skills', icon: <FaUsers />, color: '#34d399' },
 };
@@ -26,7 +28,13 @@ const techIcons = {
   GitHub: <SiGithub />,
   Docker: <SiDocker />,
   OpenCV: <SiOpencv />,
-  React: <SiReact />,
+  "React.js": <SiReact />,
+  "Next.js": <SiNextdotjs />,
+  Flask: <SiFlask />,
+  "Node.js": <SiNodedotjs />,
+  Redis: <SiRedis />,
+  Nginx: <SiNginx />,
+  "GitHub Actions": <SiGithubactions />,
 };
 
 function TechCategory({ catKey, items, config, delay }) {

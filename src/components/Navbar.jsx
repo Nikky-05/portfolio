@@ -5,9 +5,10 @@ import './Navbar.css';
 
 const navLinks = [
   { id: 'about', label: 'About' },
+  { id: 'services', label: 'Services' },
   { id: 'tech', label: 'Tech Stack' },
   { id: 'projects', label: 'Projects' },
-  { id: 'chatbot', label: 'Chatbot' },
+  { id: 'building', label: 'Building' },
   { id: 'contact', label: 'Contact' },
 ];
 
