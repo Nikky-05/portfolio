@@ -239,26 +239,26 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1;
-  max-width: 440px;
+  max-width: 480px;
   justify-self: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Image circle */
+/* Image circle — bigger + zoomed */
 .profile-image-wrap {
   position: relative;
-  width: 78%;
-  height: 78%;
+  width: 86%;
+  height: 86%;
   border-radius: 50%;
   overflow: hidden;
   z-index: 3;
   border: 3px solid #0a0a0a;
   box-shadow:
-    0 0 0 4px rgba(220, 38, 38, 0.5),
+    0 0 0 4px rgba(220, 38, 38, 0.55),
     0 20px 60px rgba(0, 0, 0, 0.6),
-    0 0 80px rgba(220, 38, 38, 0.4);
+    0 0 90px rgba(220, 38, 38, 0.45);
   cursor: pointer;
   transition: filter 0.4s;
 }
@@ -267,9 +267,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 25%;   /* focuses chest & face, crops legs */
+  object-position: 50% 22%;
   display: block;
-  filter: contrast(1.05) saturate(1.05);
+  transform: scale(1.15);   /* extra zoom into face + chest */
+  filter: contrast(1.08) saturate(1.08);
 }
 
 .profile-overlay {
@@ -302,7 +303,7 @@
 /* Rotating conic-gradient border */
 .profile-ring-rotator {
   position: absolute;
-  inset: 8%;
+  inset: 2%;
   border-radius: 50%;
   z-index: 2;
   padding: 4px;
@@ -390,7 +391,7 @@
   transform:
     translate(-50%, -50%)
     rotate(var(--angle))
-    translateY(-56%)
+    translateY(-240px)
     rotate(calc(-1 * var(--angle)));
   transition: box-shadow 0.3s;
 }
@@ -485,7 +486,14 @@
   .hero-typewriter,
   .hero-actions,
   .hero-socials { justify-content: center; }
-  .hero-profile { order: -1; max-width: 320px; }
+  .hero-profile { order: -1; max-width: 340px; }
+  .profile-badge {
+    transform:
+      translate(-50%, -50%)
+      rotate(var(--angle))
+      translateY(-170px)
+      rotate(calc(-1 * var(--angle)));
+  }
 }
 
 @media (max-width: 480px) {
@@ -499,10 +507,15 @@
     max-width: 260px;
     text-align: center;
   }
-  .hero-profile { max-width: 260px; }
+  .hero-profile { max-width: 280px; }
   .profile-badge {
     font-size: 0.65rem;
-    padding: 5px 10px;
+    padding: 5px 9px;
+    transform:
+      translate(-50%, -50%)
+      rotate(var(--angle))
+      translateY(-140px)
+      rotate(calc(-1 * var(--angle)));
   }
   .badge-label { display: none; }
 }
