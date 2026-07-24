@@ -52,21 +52,25 @@
   to { transform: rotate(360deg); }
 }
 
-/* Split layout: text left, image right */
+/* Centered stack: DP top, text below */
 .hero-layout {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 60px;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 56px;
+  text-align: center;
 }
 
 .hero-content {
-  text-align: left;
-  max-width: 640px;
+  text-align: center;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Status badge */
@@ -149,6 +153,7 @@
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 40px;
 }
 
@@ -209,6 +214,7 @@
 .hero-socials {
   display: flex;
   gap: 16px;
+  justify-content: center;
 }
 
 .social-link {
@@ -476,22 +482,16 @@
 }
 
 /* Responsive */
+.hero-typewriter { justify-content: center; }
+
 @media (max-width: 900px) {
-  .hero-layout {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
-  }
-  .hero-content { text-align: center; margin: 0 auto; }
-  .hero-typewriter,
-  .hero-actions,
-  .hero-socials { justify-content: center; }
-  .hero-profile { order: -1; max-width: 340px; }
+  .hero-layout { gap: 44px; }
+  .hero-profile { max-width: 360px; }
   .profile-badge {
     transform:
       translate(-50%, -50%)
       rotate(var(--angle))
-      translateY(-170px)
+      translateY(-180px)
       rotate(calc(-1 * var(--angle)));
   }
 }

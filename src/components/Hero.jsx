@@ -26,12 +26,78 @@ export default function Hero() {
       </div>
 
       <div className="hero-layout">
-        {/* LEFT — Text content */}
+        {/* TOP — Profile image with unique design */}
+        <motion.div
+          className="hero-profile"
+          initial={{ opacity: 0, scale: 0.7 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3, duration: 0.9, ease: 'easeOut' }}
+        >
+          {/* Rotating conic-gradient border */}
+          <div className="profile-ring-rotator">
+            <div className="profile-ring-gradient" />
+          </div>
+
+          {/* Outer glow rings */}
+          <div className="profile-glow-ring profile-glow-1" />
+          <div className="profile-glow-ring profile-glow-2" />
+          <div className="profile-glow-ring profile-glow-3" />
+
+          {/* Actual image circle */}
+          <motion.div
+            className="profile-image-wrap"
+            whileHover={{ scale: 1.03 }}
+            transition={{ type: 'spring', stiffness: 220 }}
+          >
+            <img src={profileImg} alt="Nikky Bisen" className="profile-image" />
+            <div className="profile-overlay" />
+            <div className="profile-scanline" />
+          </motion.div>
+
+          {/* Floating tech badges orbiting the image */}
+          <div className="profile-badges">
+            {floatingBadges.map((b, i) => (
+              <motion.div
+                key={b.label}
+                className="profile-badge"
+                style={{
+                  '--angle': `${b.angle}deg`,
+                }}
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1.1 + i * 0.1, type: 'spring' }}
+                whileHover={{ scale: 1.15, y: -3 }}
+              >
+                <span className="badge-icon">{b.icon}</span>
+                <span className="badge-label">{b.label}</span>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Corner accent dots */}
+          <span className="profile-corner corner-tl" />
+          <span className="profile-corner corner-tr" />
+          <span className="profile-corner corner-bl" />
+          <span className="profile-corner corner-br" />
+
+          {/* Available badge */}
+          <motion.div
+            className="profile-available"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.4 }}
+          >
+            <span className="avail-dot" />
+            Open to work
+          </motion.div>
+        </motion.div>
+
+        {/* BOTTOM — Text content */}
         <motion.div
           className="hero-content"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1, delay: 0.6 }}
         >
           <motion.div
             className="status-badge"
@@ -120,71 +186,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* RIGHT — Profile image with unique design */}
-        <motion.div
-          className="hero-profile"
-          initial={{ opacity: 0, scale: 0.7 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.6, duration: 0.9, ease: 'easeOut' }}
-        >
-          {/* Rotating conic-gradient border */}
-          <div className="profile-ring-rotator">
-            <div className="profile-ring-gradient" />
-          </div>
-
-          {/* Outer glow rings */}
-          <div className="profile-glow-ring profile-glow-1" />
-          <div className="profile-glow-ring profile-glow-2" />
-          <div className="profile-glow-ring profile-glow-3" />
-
-          {/* Actual image circle */}
-          <motion.div
-            className="profile-image-wrap"
-            whileHover={{ scale: 1.03 }}
-            transition={{ type: 'spring', stiffness: 220 }}
-          >
-            <img src={profileImg} alt="Nikky Bisen" className="profile-image" />
-            <div className="profile-overlay" />
-            <div className="profile-scanline" />
-          </motion.div>
-
-          {/* Floating tech badges orbiting the image */}
-          <div className="profile-badges">
-            {floatingBadges.map((b, i) => (
-              <motion.div
-                key={b.label}
-                className="profile-badge"
-                style={{
-                  '--angle': `${b.angle}deg`,
-                }}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1.3 + i * 0.1, type: 'spring' }}
-                whileHover={{ scale: 1.15, y: -3 }}
-              >
-                <span className="badge-icon">{b.icon}</span>
-                <span className="badge-label">{b.label}</span>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Corner accent dots */}
-          <span className="profile-corner corner-tl" />
-          <span className="profile-corner corner-tr" />
-          <span className="profile-corner corner-bl" />
-          <span className="profile-corner corner-br" />
-
-          {/* Available badge */}
-          <motion.div
-            className="profile-available"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.6 }}
-          >
-            <span className="avail-dot" />
-            Open to work
-          </motion.div>
-        </motion.div>
       </div>
 
       {/* Scroll indicator */}
