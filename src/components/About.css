@@ -1,4 +1,4 @@
-.about-grid {
+﻿.about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
@@ -10,9 +10,9 @@
 .about-code {
   padding: 0 !important;
   overflow: hidden;
-  background: var(--navy) !important;
-  border-color: rgba(10, 37, 64, 0.25) !important;
-  box-shadow: 0 14px 34px rgba(10, 37, 64, 0.22) !important;
+  background: #0a0a0a !important;
+  border-color: rgba(220, 38, 38, 0.3) !important;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.6), 0 0 24px rgba(220, 38, 38, 0.15) !important;
 }
 
 .code-header {
@@ -50,7 +50,7 @@
   font-family: var(--font-code);
   font-size: 0.85rem;
   line-height: 1.8;
-  color: #7dd3fc;
+  color: #f87171;
   overflow-x: auto;
   margin: 0;
 }

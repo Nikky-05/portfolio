@@ -1,0 +1,109 @@
+.wa-fab {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.wa-fab-inner {
+  position: relative;
+  z-index: 3;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #dc2626 0%, #000000 100%);
+  border: 2px solid rgba(220, 38, 38, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.7rem;
+  box-shadow:
+    0 8px 24px rgba(220, 38, 38, 0.5),
+    0 0 0 1px rgba(0, 0, 0, 0.4) inset,
+    0 0 20px rgba(220, 38, 38, 0.3);
+  transition: box-shadow 0.3s;
+}
+
+.wa-fab:hover .wa-fab-inner {
+  box-shadow:
+    0 10px 30px rgba(220, 38, 38, 0.8),
+    0 0 25px rgba(239, 68, 68, 0.6);
+}
+
+/* Pulse rings — red glow */
+.wa-pulse-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(220, 38, 38, 0.5);
+  animation: wa-pulse 2.4s ease-out infinite;
+}
+
+.wa-pulse-2 {
+  animation-delay: 1.2s;
+}
+
+@keyframes wa-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+/* Tooltip */
+.wa-tooltip {
+  position: absolute;
+  left: calc(100% + 14px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0a0a0a;
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(220, 38, 38, 0.25);
+  pointer-events: none;
+}
+
+.wa-tooltip::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-right-color: rgba(220, 38, 38, 0.4);
+}
+
+@media (max-width: 640px) {
+  .wa-fab {
+    bottom: 20px;
+    left: 20px;
+    width: 54px;
+    height: 54px;
+  }
+  .wa-fab-inner {
+    width: 54px;
+    height: 54px;
+    font-size: 1.5rem;
+  }
+  .wa-tooltip { display: none; }
+}

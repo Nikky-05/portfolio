@@ -1,4 +1,4 @@
-.tech-grid {
+﻿.tech-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
@@ -39,8 +39,8 @@
   align-items: center;
   gap: 6px;
   padding: 6px 14px;
-  background: rgba(10, 37, 64, 0.04);
-  border: 1px solid rgba(10, 37, 64, 0.08);
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 20px;
   font-size: 0.8rem;
   color: var(--text-secondary);
@@ -85,9 +85,9 @@
   color: var(--text-muted);
   white-space: nowrap;
   padding: 8px 16px;
-  border: 1px solid rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(220, 38, 38, 0.12);
   border-radius: 8px;
-  background: rgba(37, 99, 235, 0.04);
+  background: rgba(220, 38, 38, 0.04);
 }
 
 .marquee-icon {

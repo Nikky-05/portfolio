@@ -1,4 +1,5 @@
 services:
+  # Static frontend (existing)
   - type: static
     name: nikky-portfolio
     buildCommand: npm install && npm run build
@@ -11,3 +12,29 @@ services:
       - type: rewrite
         source: /*
         destination: /index.html
+
+  # FastAPI backend for visitor tracking
+  - type: web
+    name: nikky-tracker
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: nikky-tracker-db
+          property: connectionString
+      - key: ADMIN_PASSWORD
+        sync: false   # set manually in Render dashboard (strong password)
+      - key: JWT_SECRET
+        generateValue: true
+      - key: FRONTEND_ORIGIN
+        sync: false   # set to your Vercel URL, e.g. https://portfolio-mu-orpin-21.vercel.app
+
+databases:
+  - name: nikky-tracker-db
+    plan: free
+    databaseName: visitors
+    user: tracker

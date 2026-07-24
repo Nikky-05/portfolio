@@ -12,6 +12,9 @@ import WhyChooseUs from './components/WhyChooseUs';
 import Chatbot from './components/Chatbot';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Viewers from './components/Viewers';
+import WhatsAppButton from './components/WhatsAppButton';
+import { initTracker } from './lib/tracker';
 
 function ScrollProgress() {
   const [width, setWidth] = useState(0);
@@ -47,7 +50,7 @@ function Loader() {
         position: 'fixed',
         inset: 0,
         zIndex: 99999,
-        background: '#eef3fb',
+        background: '#000000',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -63,10 +66,11 @@ function Loader() {
           fontFamily: 'Orbitron, sans-serif',
           fontSize: 'clamp(2rem, 6vw, 3.5rem)',
           fontWeight: 900,
-          background: 'linear-gradient(135deg, #0a2540, #1d4ed8, #2563eb)',
+          background: 'linear-gradient(135deg, #ffffff, #ef4444, #dc2626)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           letterSpacing: '4px',
+          textShadow: '0 0 30px rgba(220, 38, 38, 0.5)',
         }}
       >
         &lt;NB/&gt;
@@ -75,7 +79,7 @@ function Loader() {
         style={{
           width: '200px',
           height: '3px',
-          background: 'rgba(10, 37, 64, 0.1)',
+          background: 'rgba(220, 38, 38, 0.15)',
           borderRadius: '2px',
           overflow: 'hidden',
         }}
@@ -86,9 +90,9 @@ function Loader() {
           transition={{ duration: 1.5, ease: 'easeInOut' }}
           style={{
             height: '100%',
-            background: 'linear-gradient(90deg, #0a2540, #1d4ed8, #2563eb)',
+            background: 'linear-gradient(90deg, #7f1d1d, #dc2626, #ef4444)',
             borderRadius: '2px',
-            boxShadow: '0 0 15px rgba(37, 99, 235, 0.6)',
+            boxShadow: '0 0 20px rgba(220, 38, 38, 0.8)',
           }}
         />
       </motion.div>
@@ -99,7 +103,7 @@ function Loader() {
         style={{
           fontFamily: 'JetBrains Mono, monospace',
           fontSize: '0.8rem',
-          color: '#64748b',
+          color: '#a1a1aa',
           letterSpacing: '3px',
           textTransform: 'uppercase',
         }}
@@ -128,7 +132,7 @@ function BackToTop() {
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.8 }}
-      whileHover={{ scale: 1.1, boxShadow: '0 0 25px rgba(37,99,235,0.5)' }}
+      whileHover={{ scale: 1.1, boxShadow: '0 0 30px rgba(220,38,38,0.7)' }}
       whileTap={{ scale: 0.9 }}
       style={{
         position: 'fixed',
@@ -136,8 +140,8 @@ function BackToTop() {
         right: '30px',
         width: '48px',
         height: '48px',
-        background: 'linear-gradient(135deg, #1d4ed8, #0a2540)',
-        border: 'none',
+        background: 'linear-gradient(135deg, #dc2626, #000000)',
+        border: '1px solid rgba(220, 38, 38, 0.4)',
         borderRadius: '14px',
         color: 'white',
         fontSize: '1.2rem',
@@ -146,7 +150,7 @@ function BackToTop() {
         alignItems: 'center',
         justifyContent: 'center',
         zIndex: 999,
-        boxShadow: '0 6px 20px rgba(10,37,64,0.25)',
+        boxShadow: '0 6px 20px rgba(220, 38, 38, 0.4)',
       }}
     >
       ↑
@@ -155,6 +159,10 @@ function BackToTop() {
 }
 
 export default function App() {
+  useEffect(() => {
+    initTracker();
+  }, []);
+
   return (
     <>
       <Loader />
@@ -172,6 +180,8 @@ export default function App() {
       <Contact />
       <Footer />
       <BackToTop />
+      <WhatsAppButton />
+      <Viewers />
     </>
   );
 }

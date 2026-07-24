@@ -10,13 +10,13 @@ import { techStack } from '../data/portfolio';
 import './TechStack.css';
 
 const categoryConfig = {
-  backend: { label: 'Backend', icon: <FaServer />, color: '#1d4ed8' },
-  frontend: { label: 'Frontend', icon: <FaCode />, color: '#3b82f6' },
-  databases: { label: 'Databases', icon: <FaDatabase />, color: '#0ea5e9' },
-  aiMl: { label: 'AI / ML', icon: <FaBrain />, color: '#1e3a8a' },
-  cloud: { label: 'Cloud & DevOps', icon: <FaCloud />, color: '#0284c7' },
-  tools: { label: 'Tools', icon: <FaTools />, color: '#2563eb' },
-  softSkills: { label: 'Soft Skills', icon: <FaUsers />, color: '#0a2540' },
+  backend: { label: 'Backend', icon: <FaServer />, color: '#dc2626' },
+  frontend: { label: 'Frontend', icon: <FaCode />, color: '#ef4444' },
+  databases: { label: 'Databases', icon: <FaDatabase />, color: '#b91c1c' },
+  aiMl: { label: 'AI / ML', icon: <FaBrain />, color: '#7f1d1d' },
+  cloud: { label: 'Cloud & DevOps', icon: <FaCloud />, color: '#991b1b' },
+  tools: { label: 'Tools', icon: <FaTools />, color: '#f87171' },
+  softSkills: { label: 'Soft Skills', icon: <FaUsers />, color: '#ffffff' },
 };
 
 const techIcons = {
