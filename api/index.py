@@ -26,8 +26,12 @@ from user_agents import parse as parse_ua
 # Config
 # ---------------------------------------------------------------------------
 _raw_db_url = os.getenv("DATABASE_URL") or os.getenv("POSTGRES_URL") or ""
-# Neon/Vercel gives postgres:// — SQLAlchemy wants postgresql://
-DATABASE_URL = _raw_db_url.replace("postgres://", "postgresql://", 1)
+# Neon/Vercel gives postgres:// — SQLAlchemy wants postgresql+psycopg:// (v3 driver)
+if _raw_db_url.startswith("postgres://"):
+    _raw_db_url = "postgresql://" + _raw_db_url[len("postgres://"):]
+if _raw_db_url.startswith("postgresql://") and "+" not in _raw_db_url.split("://", 1)[0]:
+    _raw_db_url = "postgresql+psycopg://" + _raw_db_url[len("postgresql://"):]
+DATABASE_URL = _raw_db_url
 
 ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "1")
 JWT_SECRET = os.getenv("JWT_SECRET", "dev-secret-change-me")
