@@ -1,4 +1,4 @@
-﻿.contact-grid {
+.contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 40px;
@@ -107,7 +107,7 @@
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--accent-purple);
-  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.25);
+  box-shadow: 0 0 0 3px rgba(107, 142, 35, 0.25);
   background: #222222;
 }
 
@@ -128,11 +128,11 @@
   letter-spacing: 0.5px;
   transition: all 0.3s;
   align-self: flex-start;
-  box-shadow: 0 10px 24px rgba(220, 38, 38, 0.22);
+  box-shadow: 0 10px 24px rgba(107, 142, 35, 0.22);
 }
 
 .form-submit:hover {
-  box-shadow: 0 14px 30px rgba(220, 38, 38, 0.38);
+  box-shadow: 0 14px 30px rgba(107, 142, 35, 0.38);
 }
 
 .form-submit.submitted {

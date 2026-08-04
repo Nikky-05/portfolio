@@ -67,11 +67,11 @@ function Loader() {
           fontFamily: 'Orbitron, sans-serif',
           fontSize: 'clamp(2rem, 6vw, 3.5rem)',
           fontWeight: 900,
-          background: 'linear-gradient(135deg, #ffffff, #ef4444, #dc2626)',
+          background: 'linear-gradient(135deg, #ffffff, #8fa839, #6b8e23)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           letterSpacing: '4px',
-          textShadow: '0 0 30px rgba(220, 38, 38, 0.5)',
+          textShadow: '0 0 30px rgba(107, 142, 35, 0.5)',
         }}
       >
         &lt;NB/&gt;
@@ -80,7 +80,7 @@ function Loader() {
         style={{
           width: '200px',
           height: '3px',
-          background: 'rgba(220, 38, 38, 0.15)',
+          background: 'rgba(107, 142, 35, 0.15)',
           borderRadius: '2px',
           overflow: 'hidden',
         }}
@@ -91,9 +91,9 @@ function Loader() {
           transition={{ duration: 1.5, ease: 'easeInOut' }}
           style={{
             height: '100%',
-            background: 'linear-gradient(90deg, #7f1d1d, #dc2626, #ef4444)',
+            background: 'linear-gradient(90deg, #3d4d1a, #6b8e23, #8fa839)',
             borderRadius: '2px',
-            boxShadow: '0 0 20px rgba(220, 38, 38, 0.8)',
+            boxShadow: '0 0 20px rgba(107, 142, 35, 0.8)',
           }}
         />
       </motion.div>
@@ -133,7 +133,7 @@ function BackToTop() {
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.8 }}
-      whileHover={{ scale: 1.1, boxShadow: '0 0 30px rgba(220,38,38,0.7)' }}
+      whileHover={{ scale: 1.1, boxShadow: '0 0 30px rgba(107,142,35,0.7)' }}
       whileTap={{ scale: 0.9 }}
       style={{
         position: 'fixed',
@@ -141,8 +141,8 @@ function BackToTop() {
         right: '30px',
         width: '48px',
         height: '48px',
-        background: 'linear-gradient(135deg, #dc2626, #000000)',
-        border: '1px solid rgba(220, 38, 38, 0.4)',
+        background: 'linear-gradient(135deg, #6b8e23, #000000)',
+        border: '1px solid rgba(107, 142, 35, 0.4)',
         borderRadius: '14px',
         color: 'white',
         fontSize: '1.2rem',
@@ -151,7 +151,7 @@ function BackToTop() {
         alignItems: 'center',
         justifyContent: 'center',
         zIndex: 999,
-        boxShadow: '0 6px 20px rgba(220, 38, 38, 0.4)',
+        boxShadow: '0 6px 20px rgba(107, 142, 35, 0.4)',
       }}
     >
       ↑

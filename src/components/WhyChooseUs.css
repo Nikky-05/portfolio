@@ -1,4 +1,4 @@
-﻿.why-grid {
+.why-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -20,8 +20,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(220, 38, 38, 0.08);
-  border: 1px solid rgba(220, 38, 38, 0.16);
+  background: rgba(107, 142, 35, 0.08);
+  border: 1px solid rgba(107, 142, 35, 0.16);
   border-radius: 16px;
 }
 

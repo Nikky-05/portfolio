@@ -128,14 +128,14 @@ export default function SpaceScene() {
     const drawNebula = (t) => {
       const wobble = Math.sin(t * 0.0004) * 40;
       const g1 = ctx.createRadialGradient(W * 0.2 + wobble, H * 0.3, 20, W * 0.2, H * 0.3, 380);
-      g1.addColorStop(0, 'rgba(220, 38, 38, 0.18)');
-      g1.addColorStop(1, 'rgba(220, 38, 38, 0)');
+      g1.addColorStop(0, 'rgba(107, 142, 35, 0.18)');
+      g1.addColorStop(1, 'rgba(107, 142, 35, 0)');
       ctx.fillStyle = g1;
       ctx.fillRect(0, 0, W, H);
 
       const g2 = ctx.createRadialGradient(W * 0.85, H * 0.7 - wobble, 20, W * 0.85, H * 0.7, 420);
-      g2.addColorStop(0, 'rgba(127, 29, 29, 0.22)');
-      g2.addColorStop(1, 'rgba(127, 29, 29, 0)');
+      g2.addColorStop(0, 'rgba(61, 77, 26, 0.22)');
+      g2.addColorStop(1, 'rgba(61, 77, 26, 0)');
       ctx.fillStyle = g2;
       ctx.fillRect(0, 0, W, H);
     };
@@ -190,7 +190,7 @@ export default function SpaceScene() {
       }
 
       // Edge highlight
-      ctx.strokeStyle = 'rgba(220, 38, 38, 0.15)';
+      ctx.strokeStyle = 'rgba(107, 142, 35, 0.15)';
       ctx.lineWidth = 1;
       ctx.beginPath();
       ctx.arc(0, 0, a.r, 0, Math.PI * 2);
@@ -233,7 +233,7 @@ export default function SpaceScene() {
       // Body
       ctx.fillStyle = '#e5e7eb';
       ctx.fillRect(-4, -5, 8, 10);
-      ctx.fillStyle = '#dc2626';
+      ctx.fillStyle = '#6b8e23';
       ctx.fillRect(-4, 3, 8, 2);
 
       // Antenna / dish
@@ -243,7 +243,7 @@ export default function SpaceScene() {
       ctx.moveTo(0, -5);
       ctx.lineTo(0, -10);
       ctx.stroke();
-      ctx.fillStyle = 'rgba(220,38,38,0.9)';
+      ctx.fillStyle = 'rgba(107,142,35,0.9)';
       ctx.beginPath();
       ctx.arc(0, -11, 1.6, 0, Math.PI * 2);
       ctx.fill();
@@ -251,7 +251,7 @@ export default function SpaceScene() {
       // Blink light
       const blink = (Math.sin(t * 0.01) + 1) / 2;
       ctx.globalAlpha = blink;
-      ctx.fillStyle = '#f87171';
+      ctx.fillStyle = '#b8ce5a';
       ctx.beginPath();
       ctx.arc(0, 6, 1.6, 0, Math.PI * 2);
       ctx.fill();
@@ -285,7 +285,7 @@ export default function SpaceScene() {
       ctx.fill();
 
       // Red band
-      ctx.fillStyle = '#dc2626';
+      ctx.fillStyle = '#6b8e23';
       ctx.fillRect(-6, -3, 12, 3);
 
       // Window
@@ -295,7 +295,7 @@ export default function SpaceScene() {
       ctx.fill();
 
       // Fins
-      ctx.fillStyle = '#dc2626';
+      ctx.fillStyle = '#6b8e23';
       ctx.beginPath();
       ctx.moveTo(-6, 10); ctx.lineTo(-11, 14); ctx.lineTo(-6, 6); ctx.closePath();
       ctx.fill();
@@ -308,7 +308,7 @@ export default function SpaceScene() {
       const flameGrad = ctx.createLinearGradient(0, 10, 0, 26 + flick);
       flameGrad.addColorStop(0, 'rgba(255, 240, 200, 1)');
       flameGrad.addColorStop(0.5, 'rgba(255, 140, 40, 0.9)');
-      flameGrad.addColorStop(1, 'rgba(220, 38, 38, 0)');
+      flameGrad.addColorStop(1, 'rgba(107, 142, 35, 0)');
       ctx.fillStyle = flameGrad;
       ctx.beginPath();
       ctx.moveTo(-4, 10);

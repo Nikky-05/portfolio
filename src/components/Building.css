@@ -1,4 +1,4 @@
-﻿.building-grid {
+.building-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
@@ -23,8 +23,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(220, 38, 38, 0.08);
-  border: 1px solid rgba(220, 38, 38, 0.16);
+  background: rgba(107, 142, 35, 0.08);
+  border: 1px solid rgba(107, 142, 35, 0.16);
   border-radius: 14px;
 }
 
@@ -38,8 +38,8 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--accent-cyan);
-  background: rgba(220, 38, 38, 0.07);
-  border: 1px solid rgba(220, 38, 38, 0.18);
+  background: rgba(107, 142, 35, 0.07);
+  border: 1px solid rgba(107, 142, 35, 0.18);
   border-radius: 20px;
 }
 

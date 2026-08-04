@@ -145,7 +145,7 @@ export default function Hero() {
             <motion.a
               href="#projects"
               className="btn-primary"
-              whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(220,38,38,0.6)' }}
+              whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(107,142,35,0.6)' }}
               whileTap={{ scale: 0.95 }}
             >
               View Projects

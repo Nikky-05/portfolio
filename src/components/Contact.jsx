@@ -23,10 +23,10 @@ export default function Contact() {
   };
 
   const contactLinks = [
-    { icon: <FiMail />, label: 'Email', value: personalInfo.email, href: `mailto:${personalInfo.email}`, color: '#dc2626' },
+    { icon: <FiMail />, label: 'Email', value: personalInfo.email, href: `mailto:${personalInfo.email}`, color: '#6b8e23' },
     { icon: <FiGithub />, label: 'GitHub', value: 'Nikky-05', href: personalInfo.github, color: '#ffffff' },
-    { icon: <FiLinkedin />, label: 'LinkedIn', value: 'Nikky Bisen', href: personalInfo.linkedin, color: '#ef4444' },
-    { icon: <FiMapPin />, label: 'Location', value: 'India', href: '#', color: '#b91c1c' },
+    { icon: <FiLinkedin />, label: 'LinkedIn', value: 'Nikky Bisen', href: personalInfo.linkedin, color: '#8fa839' },
+    { icon: <FiMapPin />, label: 'Location', value: 'India', href: '#', color: '#556b2f' },
   ];
 
   return (

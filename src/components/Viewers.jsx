@@ -198,11 +198,11 @@ function Dashboard({ onLogout }) {
       </div>
 
       <div className="v-stat-grid">
-        <StatCard icon={<FiEye />} label="Total Visits" value={stats.total_visits} accent="#dc2626" />
-        <StatCard icon={<FiUsers />} label="Unique Visitors" value={stats.unique_visitors} accent="#ef4444" />
-        <StatCard icon={<FiCalendar />} label="Today's Visits" value={stats.visits_today} accent="#b91c1c" />
-        <StatCard icon={<FiUsers />} label="Unique Today" value={stats.unique_today} accent="#f87171" />
-        <StatCard icon={<FiClock />} label="Avg. Duration" value={formatDuration(Math.round(stats.avg_duration_seconds))} accent="#7f1d1d" />
+        <StatCard icon={<FiEye />} label="Total Visits" value={stats.total_visits} accent="#6b8e23" />
+        <StatCard icon={<FiUsers />} label="Unique Visitors" value={stats.unique_visitors} accent="#8fa839" />
+        <StatCard icon={<FiCalendar />} label="Today's Visits" value={stats.visits_today} accent="#556b2f" />
+        <StatCard icon={<FiUsers />} label="Unique Today" value={stats.unique_today} accent="#b8ce5a" />
+        <StatCard icon={<FiClock />} label="Avg. Duration" value={formatDuration(Math.round(stats.avg_duration_seconds))} accent="#3d4d1a" />
       </div>
 
       <div className="v-breakdown-grid">

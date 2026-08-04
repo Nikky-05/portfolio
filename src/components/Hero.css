@@ -28,14 +28,14 @@
 .orb-1 {
   width: min(600px, 80vw);
   height: min(600px, 80vw);
-  border-color: rgba(220, 38, 38, 0.14);
+  border-color: rgba(107, 142, 35, 0.14);
   animation-duration: 25s;
 }
 
 .orb-2 {
   width: min(450px, 60vw);
   height: min(450px, 60vw);
-  border-color: rgba(220, 38, 38, 0.11);
+  border-color: rgba(107, 142, 35, 0.11);
   animation-duration: 20s;
   animation-direction: reverse;
 }
@@ -79,8 +79,8 @@
   align-items: center;
   gap: 8px;
   padding: 8px 20px;
-  background: rgba(220, 38, 38, 0.08);
-  border: 1px solid rgba(220, 38, 38, 0.22);
+  background: rgba(107, 142, 35, 0.08);
+  border: 1px solid rgba(107, 142, 35, 0.22);
   border-radius: 50px;
   font-size: 0.85rem;
   color: var(--accent-cyan);
@@ -125,7 +125,7 @@
   line-height: 1.1;
   letter-spacing: 3px;
   text-transform: uppercase;
-  filter: drop-shadow(0 6px 20px rgba(220, 38, 38, 0.4));
+  filter: drop-shadow(0 6px 20px rgba(107, 142, 35, 0.4));
 }
 
 /* Typewriter */
@@ -171,7 +171,7 @@
   text-decoration: none;
   overflow: hidden;
   letter-spacing: 0.5px;
-  box-shadow: 0 10px 24px rgba(220, 38, 38, 0.4);
+  box-shadow: 0 10px 24px rgba(107, 142, 35, 0.4);
 }
 
 .btn-glow {
@@ -206,7 +206,7 @@
 
 .btn-outline:hover {
   border-color: var(--accent-purple);
-  background: rgba(220, 38, 38, 0.1);
+  background: rgba(107, 142, 35, 0.1);
   color: var(--accent-orange);
 }
 
@@ -234,8 +234,8 @@
 .social-link:hover {
   color: var(--accent-orange);
   border-color: var(--accent-purple);
-  background: rgba(220, 38, 38, 0.08);
-  box-shadow: 0 8px 18px rgba(220, 38, 38, 0.3);
+  background: rgba(107, 142, 35, 0.08);
+  box-shadow: 0 8px 18px rgba(107, 142, 35, 0.3);
 }
 
 /* ==========================
@@ -262,9 +262,9 @@
   z-index: 3;
   border: 3px solid #0a0a0a;
   box-shadow:
-    0 0 0 4px rgba(220, 38, 38, 0.55),
+    0 0 0 4px rgba(107, 142, 35, 0.55),
     0 20px 60px rgba(0, 0, 0, 0.6),
-    0 0 90px rgba(220, 38, 38, 0.45);
+    0 0 90px rgba(107, 142, 35, 0.45);
   cursor: pointer;
   transition: filter 0.4s;
 }
@@ -283,7 +283,7 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 30% 20%, rgba(220, 38, 38, 0.0) 40%, rgba(220, 38, 38, 0.25) 100%),
+    radial-gradient(circle at 30% 20%, rgba(107, 142, 35, 0.0) 40%, rgba(107, 142, 35, 0.25) 100%),
     linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.4) 100%);
   pointer-events: none;
   mix-blend-mode: multiply;
@@ -293,7 +293,7 @@
 .profile-scanline {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 0%, rgba(220, 38, 38, 0.4) 50%, transparent 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(107, 142, 35, 0.4) 50%, transparent 100%);
   height: 8%;
   animation: scan 4s ease-in-out infinite;
   pointer-events: none;
@@ -322,11 +322,11 @@
   border-radius: 50%;
   background: conic-gradient(
     from 0deg,
-    #dc2626 0deg,
-    #ef4444 90deg,
+    #6b8e23 0deg,
+    #8fa839 90deg,
     transparent 180deg,
-    #7f1d1d 270deg,
-    #dc2626 360deg
+    #3d4d1a 270deg,
+    #6b8e23 360deg
   );
   filter: blur(2px);
 }
@@ -347,19 +347,19 @@
 
 .profile-glow-1 {
   inset: 0;
-  border: 1px dashed rgba(220, 38, 38, 0.4);
+  border: 1px dashed rgba(107, 142, 35, 0.4);
   animation: rotate-ring 30s linear infinite;
 }
 
 .profile-glow-2 {
   inset: -8%;
-  border: 1px dashed rgba(239, 68, 68, 0.25);
+  border: 1px dashed rgba(143, 168, 57, 0.25);
   animation: rotate-ring 40s linear infinite reverse;
 }
 
 .profile-glow-3 {
   inset: -16%;
-  border: 1px solid rgba(220, 38, 38, 0.12);
+  border: 1px solid rgba(107, 142, 35, 0.12);
   animation: pulse-scale 5s ease-in-out infinite;
 }
 
@@ -385,13 +385,13 @@
   gap: 6px;
   padding: 6px 12px;
   background: #0a0a0a;
-  border: 1px solid rgba(220, 38, 38, 0.5);
+  border: 1px solid rgba(107, 142, 35, 0.5);
   border-radius: 50px;
   font-family: var(--font-code);
   font-size: 0.72rem;
   color: #f5f5f5;
   font-weight: 600;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6), 0 0 12px rgba(220, 38, 38, 0.4);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6), 0 0 12px rgba(107, 142, 35, 0.4);
   pointer-events: auto;
   cursor: default;
   transform:
@@ -403,8 +403,8 @@
 }
 
 .profile-badge:hover {
-  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.7);
-  border-color: #ef4444;
+  box-shadow: 0 8px 24px rgba(107, 142, 35, 0.7);
+  border-color: #8fa839;
 }
 
 .badge-icon {
@@ -422,7 +422,7 @@
   position: absolute;
   width: 22px;
   height: 22px;
-  border: 2px solid #dc2626;
+  border: 2px solid #6b8e23;
   z-index: 5;
   opacity: 0.8;
 }

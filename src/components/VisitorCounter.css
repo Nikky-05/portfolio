@@ -9,10 +9,10 @@
   background: linear-gradient(135deg, rgba(15, 15, 15, 0.92), rgba(30, 5, 5, 0.92));
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(220, 38, 38, 0.28);
+  border: 1px solid rgba(107, 142, 35, 0.28);
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.55),
-    0 0 22px rgba(220, 38, 38, 0.18),
+    0 0 22px rgba(107, 142, 35, 0.18),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
   color: #f5f5f5;
   font-family: var(--font-main, system-ui, sans-serif);
@@ -22,7 +22,7 @@
 .vc-glow {
   position: absolute;
   inset: -40%;
-  background: radial-gradient(circle at 30% 30%, rgba(220, 38, 38, 0.25), transparent 55%);
+  background: radial-gradient(circle at 30% 30%, rgba(107, 142, 35, 0.25), transparent 55%);
   pointer-events: none;
   animation: vc-glow-pulse 5s ease-in-out infinite;
 }
@@ -79,7 +79,7 @@
 
 .vc-icon {
   font-size: 1.1rem;
-  color: #ef4444;
+  color: #8fa839;
   flex-shrink: 0;
 }
 
@@ -88,7 +88,7 @@
   font-size: 1.35rem;
   font-weight: 800;
   line-height: 1;
-  background: linear-gradient(135deg, #ffffff, #f87171);
+  background: linear-gradient(135deg, #ffffff, #b8ce5a);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -106,7 +106,7 @@
 .vc-divider {
   width: 1px;
   height: 32px;
-  background: linear-gradient(180deg, transparent, rgba(220, 38, 38, 0.35), transparent);
+  background: linear-gradient(180deg, transparent, rgba(107, 142, 35, 0.35), transparent);
 }
 
 .vc-today {
@@ -116,8 +116,8 @@
   text-align: center;
   margin-bottom: 12px;
   padding: 6px 0;
-  border-top: 1px dashed rgba(220, 38, 38, 0.2);
-  border-bottom: 1px dashed rgba(220, 38, 38, 0.2);
+  border-top: 1px dashed rgba(107, 142, 35, 0.2);
+  border-bottom: 1px dashed rgba(107, 142, 35, 0.2);
 }
 
 .vc-today strong {
@@ -134,9 +134,9 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  border: 1px solid rgba(220, 38, 38, 0.5);
+  border: 1px solid rgba(107, 142, 35, 0.5);
   border-radius: 10px;
-  background: linear-gradient(135deg, #7f1d1d, #dc2626);
+  background: linear-gradient(135deg, #3d4d1a, #6b8e23);
   color: white;
   font-weight: 700;
   font-size: 0.8rem;
@@ -150,7 +150,7 @@
 .vc-fail {
   margin-top: 8px;
   font-size: 0.65rem;
-  color: #f87171;
+  color: #b8ce5a;
   text-align: center;
   opacity: 0.8;
 }

@@ -17,7 +17,7 @@ export default function ParticleField() {
     resize();
     window.addEventListener('resize', resize);
 
-    const colors = ['#dc2626', '#ef4444', '#b91c1c', '#7f1d1d', '#991b1b'];
+    const colors = ['#6b8e23', '#8fa839', '#556b2f', '#3d4d1a', '#4a5f18'];
 
     class Particle {
       constructor() {

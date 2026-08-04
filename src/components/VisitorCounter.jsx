@@ -68,7 +68,7 @@ export default function VisitorCounter() {
       <motion.button
         className="vc-btn"
         onClick={openViewers}
-        whileHover={{ scale: 1.03, boxShadow: '0 0 30px rgba(220,38,38,0.6)' }}
+        whileHover={{ scale: 1.03, boxShadow: '0 0 30px rgba(107,142,35,0.6)' }}
         whileTap={{ scale: 0.97 }}
       >
         <FiUnlock /> View Visitor Details

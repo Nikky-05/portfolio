@@ -10,12 +10,12 @@ import { techStack } from '../data/portfolio';
 import './TechStack.css';
 
 const categoryConfig = {
-  backend: { label: 'Backend', icon: <FaServer />, color: '#dc2626' },
-  frontend: { label: 'Frontend', icon: <FaCode />, color: '#ef4444' },
-  databases: { label: 'Databases', icon: <FaDatabase />, color: '#b91c1c' },
-  aiMl: { label: 'AI / ML', icon: <FaBrain />, color: '#7f1d1d' },
-  cloud: { label: 'Cloud & DevOps', icon: <FaCloud />, color: '#991b1b' },
-  tools: { label: 'Tools', icon: <FaTools />, color: '#f87171' },
+  backend: { label: 'Backend', icon: <FaServer />, color: '#6b8e23' },
+  frontend: { label: 'Frontend', icon: <FaCode />, color: '#8fa839' },
+  databases: { label: 'Databases', icon: <FaDatabase />, color: '#556b2f' },
+  aiMl: { label: 'AI / ML', icon: <FaBrain />, color: '#3d4d1a' },
+  cloud: { label: 'Cloud & DevOps', icon: <FaCloud />, color: '#4a5f18' },
+  tools: { label: 'Tools', icon: <FaTools />, color: '#b8ce5a' },
   softSkills: { label: 'Soft Skills', icon: <FaUsers />, color: '#ffffff' },
 };
 

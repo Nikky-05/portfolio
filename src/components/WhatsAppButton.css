@@ -19,24 +19,24 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #dc2626 0%, #000000 100%);
-  border: 2px solid rgba(220, 38, 38, 0.6);
+  background: linear-gradient(135deg, #6b8e23 0%, #000000 100%);
+  border: 2px solid rgba(107, 142, 35, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
   font-size: 1.7rem;
   box-shadow:
-    0 8px 24px rgba(220, 38, 38, 0.5),
+    0 8px 24px rgba(107, 142, 35, 0.5),
     0 0 0 1px rgba(0, 0, 0, 0.4) inset,
-    0 0 20px rgba(220, 38, 38, 0.3);
+    0 0 20px rgba(107, 142, 35, 0.3);
   transition: box-shadow 0.3s;
 }
 
 .wa-fab:hover .wa-fab-inner {
   box-shadow:
-    0 10px 30px rgba(220, 38, 38, 0.8),
-    0 0 25px rgba(239, 68, 68, 0.6);
+    0 10px 30px rgba(107, 142, 35, 0.8),
+    0 0 25px rgba(143, 168, 57, 0.6);
 }
 
 /* Pulse rings — red glow */
@@ -44,7 +44,7 @@
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: rgba(220, 38, 38, 0.5);
+  background: rgba(107, 142, 35, 0.5);
   animation: wa-pulse 2.4s ease-out infinite;
 }
 
@@ -73,13 +73,13 @@
   color: #ffffff;
   padding: 8px 14px;
   border-radius: 10px;
-  border: 1px solid rgba(220, 38, 38, 0.4);
+  border: 1px solid rgba(107, 142, 35, 0.4);
   font-family: var(--font-main);
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.3px;
   white-space: nowrap;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(220, 38, 38, 0.25);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(107, 142, 35, 0.25);
   pointer-events: none;
 }
 
@@ -90,7 +90,7 @@
   top: 50%;
   transform: translateY(-50%);
   border: 6px solid transparent;
-  border-right-color: rgba(220, 38, 38, 0.4);
+  border-right-color: rgba(107, 142, 35, 0.4);
 }
 
 @media (max-width: 640px) {
