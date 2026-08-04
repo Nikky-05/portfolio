@@ -1,4 +1,5 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+// Same-origin — backend runs as a Vercel Python function at /api/*
+const API_URL = import.meta.env.VITE_API_URL || '';
 const SESSION_KEY = 'nb_session_id';
 const VISIT_KEY = 'nb_last_visit_id';
 const VISIT_START_KEY = 'nb_visit_start';
