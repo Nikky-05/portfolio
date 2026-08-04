@@ -397,7 +397,7 @@
   transform:
     translate(-50%, -50%)
     rotate(var(--angle))
-    translateY(-240px)
+    translateY(-270px)
     rotate(calc(-1 * var(--angle)));
   transition: box-shadow 0.3s;
 }
@@ -491,7 +491,7 @@
     transform:
       translate(-50%, -50%)
       rotate(var(--angle))
-      translateY(-180px)
+      translateY(-210px)
       rotate(calc(-1 * var(--angle)));
   }
 }
@@ -514,7 +514,7 @@
     transform:
       translate(-50%, -50%)
       rotate(var(--angle))
-      translateY(-140px)
+      translateY(-170px)
       rotate(calc(-1 * var(--angle)));
   }
   .badge-label { display: none; }

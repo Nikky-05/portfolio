@@ -7,12 +7,13 @@ import { personalInfo } from '../data/portfolio';
 import profileImg from '../assets/nikk.jpeg';
 import './Hero.css';
 
+// Badges live in the side + bottom arc (90°–270°) so nothing crosses the face.
 const floatingBadges = [
-  { icon: <SiPython />, label: 'Python', angle: 0 },
-  { icon: <SiFastapi />, label: 'FastAPI', angle: 72 },
-  { icon: <FaBrain />, label: 'AI', angle: 144 },
-  { icon: <SiReact />, label: 'React', angle: 216 },
-  { icon: <SiDocker />, label: 'Docker', angle: 288 },
+  { icon: <SiPython />, label: 'Python', angle: 90 },
+  { icon: <SiFastapi />, label: 'FastAPI', angle: 135 },
+  { icon: <FaBrain />, label: 'AI', angle: 180 },
+  { icon: <SiReact />, label: 'React', angle: 225 },
+  { icon: <SiDocker />, label: 'Docker', angle: 270 },
 ];
 
 export default function Hero() {
