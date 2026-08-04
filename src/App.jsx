@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import ParticleField from './components/ParticleField';
+import SpaceScene from './components/SpaceScene';
+import VisitorCounter from './components/VisitorCounter';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -167,7 +168,7 @@ export default function App() {
     <>
       <Loader />
       <ScrollProgress />
-      <ParticleField />
+      <SpaceScene />
       <Navbar />
       <Hero />
       <About />
@@ -181,6 +182,7 @@ export default function App() {
       <Footer />
       <BackToTop />
       <WhatsAppButton />
+      <VisitorCounter />
       <Viewers />
     </>
   );

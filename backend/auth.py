@@ -7,7 +7,7 @@ JWT_SECRET = os.getenv("JWT_SECRET", "dev-secret-change-me")
 JWT_ALGORITHM = "HS256"
 JWT_EXPIRE_DAYS = 30
 
-ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "changeme")
+ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "1")
 
 
 def verify_password(password: str) -> bool:

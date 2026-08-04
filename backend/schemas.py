@@ -32,6 +32,7 @@ class LoginResponse(BaseModel):
 class VisitorOut(BaseModel):
     id: int
     session_id: str
+    ip: Optional[str] = None
     country: Optional[str] = None
     country_code: Optional[str] = None
     city: Optional[str] = None
@@ -43,6 +44,7 @@ class VisitorOut(BaseModel):
     referrer: Optional[str] = None
     referrer_source: Optional[str] = None
     utm_source: Optional[str] = None
+    user_agent: Optional[str] = None
     duration_seconds: int
     created_at: datetime
 

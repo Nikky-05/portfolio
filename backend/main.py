@@ -93,6 +93,15 @@ def update_duration(payload: DurationUpdate, db: Session = Depends(get_db)):
     return {"ok": True}
 
 
+@app.get("/api/public/count")
+def public_count(db: Session = Depends(get_db)):
+    total = db.query(func.count(Visitor.id)).scalar() or 0
+    unique = db.query(func.count(func.distinct(Visitor.session_id))).scalar() or 0
+    today = datetime.utcnow().replace(hour=0, minute=0, second=0, microsecond=0)
+    today_count = db.query(func.count(Visitor.id)).filter(Visitor.created_at >= today).scalar() or 0
+    return {"total_visits": total, "unique_visitors": unique, "visits_today": today_count}
+
+
 @app.post("/api/admin/login", response_model=LoginResponse)
 def login(payload: LoginRequest):
     if not verify_password(payload.password):

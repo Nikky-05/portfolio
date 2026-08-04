@@ -42,3 +42,9 @@ async function authed(path) {
 export const fetchStats = () => authed('/api/admin/stats');
 export const fetchVisitors = (page = 1, limit = 50) =>
   authed(`/api/admin/visitors?page=${page}&limit=${limit}`);
+
+export async function fetchPublicCount() {
+  const res = await fetch(`${API_URL}/api/public/count`);
+  if (!res.ok) throw new Error('Failed to load count');
+  return res.json();
+}

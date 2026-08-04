@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   FiLock, FiLogOut, FiRefreshCw, FiUsers, FiEye, FiClock, FiCalendar,
   FiMonitor, FiSmartphone, FiTablet, FiGlobe, FiInstagram, FiLinkedin,
-  FiSearch, FiExternalLink,
+  FiSearch, FiExternalLink, FiChevronDown, FiChevronRight, FiMapPin, FiWifi,
+  FiFileText,
 } from 'react-icons/fi';
 import { adminLogin, fetchStats, fetchVisitors, getToken, clearToken } from '../lib/api';
 import './Viewers.css';
@@ -235,7 +236,7 @@ function Dashboard({ onLogout }) {
 
       <div className="v-visitors-table glass-card">
         <div className="v-table-head">
-          <h3>Recent Visitors</h3>
+          <h3>Recent Visitors — click any row for full details</h3>
           <div className="v-pager">
             <button onClick={() => setPage((p) => Math.max(1, p - 1))} disabled={page === 1}>Prev</button>
             <span>Page {page}</span>
@@ -246,8 +247,10 @@ function Dashboard({ onLogout }) {
           <table>
             <thead>
               <tr>
+                <th style={{ width: 24 }}></th>
                 <th>When</th>
                 <th>Location</th>
+                <th>IP</th>
                 <th>Source</th>
                 <th>Device</th>
                 <th>Browser</th>
@@ -258,40 +261,87 @@ function Dashboard({ onLogout }) {
             </thead>
             <tbody>
               {visitors.length === 0 && (
-                <tr><td colSpan={8} className="v-empty">No visitors on this page.</td></tr>
+                <tr><td colSpan={10} className="v-empty">No visitors on this page.</td></tr>
               )}
               {visitors.map((v) => (
-                <tr key={v.id}>
-                  <td>{formatDate(v.created_at)}</td>
-                  <td>
-                    <FiGlobe style={{ marginRight: 6, opacity: 0.6 }} />
-                    {[v.city, v.country].filter(Boolean).join(', ') || '—'}
-                  </td>
-                  <td>
-                    <span className={`v-source-tag src-${v.referrer_source || 'unknown'}`}>
-                      {SOURCE_ICONS[v.referrer_source] && (
-                        <span className="v-row-icon">{SOURCE_ICONS[v.referrer_source]}</span>
-                      )}
-                      {v.referrer_source || 'unknown'}
-                    </span>
-                  </td>
-                  <td>
-                    {DEVICE_ICONS[v.device] && (
-                      <span className="v-row-icon">{DEVICE_ICONS[v.device]}</span>
-                    )}
-                    {v.device || '—'}
-                  </td>
-                  <td>{v.browser || '—'}</td>
-                  <td>{v.os || '—'}</td>
-                  <td className="v-page-cell" title={v.page}>{v.page || '/'}</td>
-                  <td>{formatDuration(v.duration_seconds)}</td>
-                </tr>
+                <VisitorRow key={v.id} v={v} />
               ))}
             </tbody>
           </table>
         </div>
       </div>
     </div>
+  );
+}
+
+function VisitorRow({ v }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <tr className="v-row-clickable" onClick={() => setOpen((o) => !o)}>
+        <td className="v-toggle-cell">{open ? <FiChevronDown /> : <FiChevronRight />}</td>
+        <td>{formatDate(v.created_at)}</td>
+        <td>
+          <FiGlobe style={{ marginRight: 6, opacity: 0.6 }} />
+          {[v.city, v.country].filter(Boolean).join(', ') || '—'}
+        </td>
+        <td className="v-ip-cell">{v.ip || '—'}</td>
+        <td>
+          <span className={`v-source-tag src-${v.referrer_source || 'unknown'}`}>
+            {SOURCE_ICONS[v.referrer_source] && (
+              <span className="v-row-icon">{SOURCE_ICONS[v.referrer_source]}</span>
+            )}
+            {v.referrer_source || 'unknown'}
+          </span>
+        </td>
+        <td>
+          {DEVICE_ICONS[v.device] && (
+            <span className="v-row-icon">{DEVICE_ICONS[v.device]}</span>
+          )}
+          {v.device || '—'}
+        </td>
+        <td>{v.browser || '—'}</td>
+        <td>{v.os || '—'}</td>
+        <td className="v-page-cell" title={v.page}>{v.page || '/'}</td>
+        <td>{formatDuration(v.duration_seconds)}</td>
+      </tr>
+      {open && (
+        <tr className="v-detail-row">
+          <td colSpan={10}>
+            <div className="v-detail-grid">
+              <div className="v-detail-item">
+                <span className="v-detail-label"><FiWifi /> IP Address</span>
+                <span className="v-detail-value">{v.ip || 'unknown'}</span>
+              </div>
+              <div className="v-detail-item">
+                <span className="v-detail-label"><FiMapPin /> Full Location</span>
+                <span className="v-detail-value">
+                  {[v.city, v.region, v.country].filter(Boolean).join(' · ') || 'unknown'}
+                </span>
+              </div>
+              <div className="v-detail-item">
+                <span className="v-detail-label"><FiMonitor /> Browser + OS</span>
+                <span className="v-detail-value">{v.browser || '?'} on {v.os || '?'}</span>
+              </div>
+              <div className="v-detail-item">
+                <span className="v-detail-label"><FiExternalLink /> Referrer</span>
+                <span className="v-detail-value v-mono" title={v.referrer}>
+                  {v.referrer || 'direct visit'}
+                </span>
+              </div>
+              <div className="v-detail-item">
+                <span className="v-detail-label"><FiUsers /> Session ID</span>
+                <span className="v-detail-value v-mono">{v.session_id}</span>
+              </div>
+              <div className="v-detail-item v-detail-wide">
+                <span className="v-detail-label"><FiFileText /> User Agent</span>
+                <span className="v-detail-value v-mono v-ua">{v.user_agent || 'unknown'}</span>
+              </div>
+            </div>
+          </td>
+        </tr>
+      )}
+    </>
   );
 }
 

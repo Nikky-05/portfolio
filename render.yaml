@@ -1,18 +1,4 @@
 services:
-  # Static frontend (existing)
-  - type: static
-    name: nikky-portfolio
-    buildCommand: npm install && npm run build
-    staticPublishPath: ./dist
-    headers:
-      - path: /*
-        name: Cache-Control
-        value: public, max-age=31536000
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
-
   # FastAPI backend for visitor tracking
   - type: web
     name: nikky-tracker
